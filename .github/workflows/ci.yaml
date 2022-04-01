@@ -22,7 +22,7 @@ jobs:
           shellcheck -s sh *.sh
       - name: tests shell
         shell: bash
-        run: ./install_test.sh
+        run: chmod a+x install_test.sh install_test.sh && ./install_test.sh
 
       - name: tests powershell
         if: matrix.os == 'windows-latest'
