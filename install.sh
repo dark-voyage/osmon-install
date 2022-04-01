@@ -3,7 +3,7 @@
 set -e
 
 if ! command -v unzip >/dev/null; then
-	echo "Xatolik: Osmon ni o'rnatish uchun unzip kerak." 1>&2
+	echo "Xatolik: Osmon ni o'rnatish uchun unzip kerak..." 1>&2
 	exit 1
 fi
 
