@@ -54,4 +54,4 @@ if (!(";$Path;".ToLower() -like "*;$BinDir;*".ToLower())) {
 }
 
 Write-Output "Osmon $OsmonExe da muvaffaqiyatli o'rnatildi!"
-Write-Output "Ko'proq ma'lumot uchun 'osmon --yordam' buyruq satrini ishga tushuring"
+Write-Output "Ko'proq ma'lumot uchun 'osmon --help' buyruq satrini ishga tushuring"

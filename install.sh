@@ -38,7 +38,7 @@ rm "$exe.zip"
 
 echo "Osmon $exe da muvaffaqiyatli o'rnatildi"
 if command -v osmon >/dev/null; then
-	echo "Ko'proq ma'lumot uchun 'osmon --yordam' buyruq satrini ishga tushuring"
+	echo "Ko'proq ma'lumot uchun 'osmon --help' buyruq satrini ishga tushuring"
 else
 	case $SHELL in
 	/bin/zsh) shell_profile=".zshrc" ;;
@@ -47,5 +47,5 @@ else
 	echo "O'zingiz ushbu satrlarni \$HOME/$shell_profile (yoki shunga o'xshash) ga qo'shib qo'ying"
 	echo "  export OSMON_INSTALL=\"$osmon_install\""
 	echo "  export PATH=\"\$OSMON_INSTALL/bin:\$PATH\""
-	echo "Ko'proq ma'lumot uchun '$exe --yordam' buyruq satrini ishga tushuring"
+	echo "Ko'proq ma'lumot uchun '$exe --help' buyruq satrini ishga tushuring"
 fi
