@@ -9,10 +9,10 @@ $v = $null; .\install.ps1
 ~\.osmon\bin\osmon.exe --version
 
 # Test that we can install a specific version at a custom location.
-Remove-Item "~\osmon-0.2.0" -Recurse -Force -ErrorAction SilentlyContinue
-$env:OSMON_INSTALL = "$Home\osmon-0.2.0"
+Remove-Item "~\osmon-0.4.0" -Recurse -Force -ErrorAction SilentlyContinue
+$env:OSMON_INSTALL = "$Home\osmon-0.4.0"
 $v = "1.0.0"; .\install.ps1
-$OsmonVersion = ~\osmon-0.2.0\bin\osmon.exe --version
+$OsmonVersion = ~\osmon-0.4.0\bin\osmon.exe --version
 if (!($OsmonVersion -like '*1.0.0*')) {
   throw $OsmonVersion
 }
@@ -27,10 +27,10 @@ if (!($OsmonVersion -like '*1.1.0*')) {
 }
 
 # Test that the old temp file installer still works.
-Remove-Item "~\osmon-0.2.0" -Recurse -Force -ErrorAction SilentlyContinue
-$env:OSMON_INSTALL = "$Home\osmon-0.2.0"
+Remove-Item "~\osmon-0.4.0" -Recurse -Force -ErrorAction SilentlyContinue
+$env:OSMON_INSTALL = "$Home\osmon-0.4.0"
 $v = $null; .\install.ps1 v1.0.1
-$OsmonVersion = ~\osmon-0.2.0\bin\osmon.exe --version
+$OsmonVersion = ~\osmon-0.4.0\bin\osmon.exe --version
 if (!($OsmonVersion -like '*1.0.1*')) {
   throw $OsmonVersion
 }
